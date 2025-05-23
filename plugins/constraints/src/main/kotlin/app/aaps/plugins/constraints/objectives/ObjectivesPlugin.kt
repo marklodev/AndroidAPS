@@ -56,16 +56,16 @@ class ObjectivesPlugin @Inject constructor(
 
     private fun setupObjectives() {
         objectives.clear()
-        objectives.add(Objective0(injector))
-        objectives.add(Objective1(injector))
-        objectives.add(Objective2(injector))
-        objectives.add(Objective3(injector))
-        objectives.add(Objective4(injector))
-        objectives.add(Objective5(injector))
-        objectives.add(Objective6(injector))
-        objectives.add(Objective7(injector))
-        objectives.add(Objective9(injector))
-        objectives.add(Objective10(injector))
+        //objectives.add(Objective0(injector))
+        //objectives.add(Objective1(injector))
+        //objectives.add(Objective2(injector))
+        //objectives.add(Objective3(injector))
+        //objectives.add(Objective4(injector))
+        //objectives.add(Objective5(injector))
+        //objectives.add(Objective6(injector))
+        //objectives.add(Objective7(injector))
+        //objectives.add(Objective9(injector))
+        //objectives.add(Objective10(injector))
         // edit companion object if you remove/add Objective
     }
 
@@ -139,6 +139,6 @@ class ObjectivesPlugin @Inject constructor(
         return value
     }
 
-    override fun isAccomplished(index: Int) = true
-    override fun isStarted(index: Int): Boolean = true
+    override fun isAccomplished(index: Int) = objectives[index].isAccomplished
+    override fun isStarted(index: Int): Boolean = objectives[index].isStarted
 }
